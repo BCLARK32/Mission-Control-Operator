@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    function welcomeTheUsar() {
+        let firstName = document.getElementById("first-name").value;
+        let lastName = document.getElementById("last-name").value;
+        let fullName = "first-name" + "last-name".value;
+        console.log(fullName);
+        alert("Welcome " + "fullname");
+        }
+    <h1>Cora</h1>
+      <div id="welcomeTheUsar">
+        <input placeholder="Enter First Name" id="first-name">
+        <input placeholder="Enter Last Name" id="last-name">
+        <button onclick="welcomeTheUsar()">Greetings</button>
+      </div>
+</head>
+<body onload='preventDefault()'>
+        <div class="container">
+          <button class="btn btn-sm btn-default like-btn active" type="button" id="10">
+            <span class="text">Alert</span>
+            <span class="badge like-badge">0</span>
+        </button>
+        </div>
+        <script>
+         preventDefault = function(){
+         var btnText = $(this).find(".btn-text")       
+         var badge = $(this).find(".like-badge")
+         var count = parseInt(badge.text());
+         if ($(this).hasClass('active')) {
+                btnText.text("Like");
+                badge.text(2);
+                $(this).removeClass('active');
+            }
+          else {
+                btnCaption.text("Liked");
+                badge.text(count + 1);
+                $(this).addClass('active');
+            }
+        }
+        </script>
+</body>
+</html>
